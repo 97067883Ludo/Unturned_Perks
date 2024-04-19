@@ -18,9 +18,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.16">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
         <PackageReference Include="OpenMod.EntityFrameworkCore.MySql" Version="3.7.4" />
-        <PackageReference Include="OpenMod.Unturned" Version="3.7.4+6bfe3e6f"/>
+        <PackageReference Include="OpenMod.Unturned" Version="3.7.4+6bfe3e6f" />
         <PackageReference Include="Legacy2CPSWorkaround" Version="1.0.0">
             <PrivateAssets>All</PrivateAssets>
         </PackageReference>
@@ -31,8 +35,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="config.yaml"/>
-        <EmbeddedResource Include="translations.yaml"/>
+        <EmbeddedResource Include="config.yaml" />
+        <EmbeddedResource Include="translations.yaml" />
     </ItemGroup>
 
     <Target Name="ChangeAliasesOfNugetRefs" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
