@@ -1,9 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using NuGet.Common;
 using OpenMod.API.Eventing;
 using OpenMod.Unturned.Players.Movement.Events;
-using ILogger = NuGet.Common.ILogger;
 
 namespace Reinier.Perks.EventListners;
 
