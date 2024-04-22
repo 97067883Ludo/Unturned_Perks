@@ -1,9 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using OpenMod.API.Plugins;
 using OpenMod.EntityFrameworkCore;
 using OpenMod.EntityFrameworkCore.Configurator;
-using OpenMod.EntityFrameworkCore.MySql.Extensions;
 using Reinier.Perks.Models;
 
 namespace Reinier.Perks.DbContext;
@@ -19,13 +17,16 @@ public class UserConnectionDbContext: OpenModDbContext<UserConnectionDbContext>
     }
 
     public DbSet<UserConnection> UserConnections => Set<UserConnection>();
-}
-
-public class PluginContainerConfigurator : IPluginContainerConfigurator
-{
-    public void ConfigureContainer(IPluginServiceConfigurationContext context)
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // You can extend how your database context works by using the overloads of this method.
-        context.ContainerBuilder.AddMySqlDbContext<UserConnectionDbContext>();
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<UserConnection>()
+            .HasKey(x => x.Id);
+
+        modelBuilder.Entity<UserConnection>()
+            .Property(x => x.Id)
+            .ValueGeneratedOnAdd();
     }
 }

@@ -16,7 +16,7 @@ public class OnPlayerTeleported : IEventListener<UnturnedPlayerTeleportingEvent>
         _logger = logger;
     }
 
-    public Task HandleEventAsync(object? sender, UnturnedPlayerTeleportingEvent @event)
+    public Task HandleEventAsync(object sender, UnturnedPlayerTeleportingEvent @event)
     {
         _logger.LogInformation($"{@event.Player.Player.name} teleported");
 

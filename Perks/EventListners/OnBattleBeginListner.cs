@@ -17,19 +17,14 @@ public class OnBattleBeginListner : IEventListener<IPlayerSpawnedEvent>
     
     public OnBattleBeginListner(ILogger<MyOpenModPlugin> logger, IUnturnedUserDirectory unturnedUserDirectory)
     {
+        
         _logger = logger;
         _userDirectory = unturnedUserDirectory;
     }
 
-    public Task HandleEventAsync(object? sender, IPlayerSpawnedEvent @event)
+    public Task HandleEventAsync(object sender, IPlayerSpawnedEvent @event)
     {
         _logger.LogInformation("start logging");
-        
-        foreach (KeyValuePair<string,object> keyValuePair in @event.Data)
-        {
-            _logger.LogInformation(keyValuePair.Key);
-            _logger.LogInformation(keyValuePair.Value.ToString());
-        }
 
         var animals = AnimalManager.animals;
 
@@ -38,7 +33,7 @@ public class OnBattleBeginListner : IEventListener<IPlayerSpawnedEvent>
             return Task.CompletedTask;
         }
 
-        UnturnedUser? unturnedUser = _userDirectory.FindUser(@event.Player.EntityInstanceId, UserSearchMode.FindById);
+        var unturnedUser = _userDirectory.FindUser(@event.Player.EntityInstanceId, UserSearchMode.FindById);
 
         if (unturnedUser == null)
         {

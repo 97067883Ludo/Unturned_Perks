@@ -3,4 +3,4 @@
 
 database:
   ConnectionStrings:
-    default: "Server=127.0.0.1; Database=openmod; Port=3306; User=root; Password=password"
+    default: "Server=192.168.178.232; Database=unturned; Port=3306; User=unturned; Password=unturned"
