@@ -6,7 +6,6 @@ using Cysharp.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OpenMod.Unturned.Plugins;
 using OpenMod.API.Plugins;
-using Reinier.Perks.DbContext;
 
 // For more, visit https://openmod.github.io/openmod-docs/devdoc/guides/getting-started.html
 
@@ -38,7 +37,11 @@ namespace Reinier.Perks
         {
             // await UniTask.SwitchToMainThread(); uncomment if you have to access Unturned or UnityEngine APIsf
             m_Logger.LogInformation("Hello World!");
-            await _context.Database.MigrateAsync();
+
+            if (await _context.Database.CanConnectAsync()) 
+            { 
+                await _context.Database.MigrateAsync();
+            }
             // await UniTask.SwitchToThreadPool(); // you can switch back to a different thread
         }
 

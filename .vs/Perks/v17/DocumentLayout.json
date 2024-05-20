@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ludo\\RiderProjects\\Perks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33EDA77E-E268-4FA3-AF37-50D15AF770D3}|Perks\\Perks.csproj|c:\\users\\ludo\\riderprojects\\perks\\perks\\perks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33EDA77E-E268-4FA3-AF37-50D15AF770D3}|Perks\\Perks.csproj|solutionrelative:perks\\perks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33EDA77E-E268-4FA3-AF37-50D15AF770D3}|Perks\\Perks.csproj|c:\\users\\ludo\\riderprojects\\perks\\perks\\config.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33EDA77E-E268-4FA3-AF37-50D15AF770D3}|Perks\\Perks.csproj|solutionrelative:perks\\config.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Perks.cs",
+              "DocumentMoniker": "C:\\Users\\Ludo\\RiderProjects\\Perks\\Perks\\Perks.cs",
+              "RelativeDocumentMoniker": "Perks\\Perks.cs",
+              "ToolTip": "C:\\Users\\Ludo\\RiderProjects\\Perks\\Perks\\Perks.cs",
+              "RelativeToolTip": "Perks\\Perks.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T17:26:08.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "config.yaml",
+              "DocumentMoniker": "C:\\Users\\Ludo\\RiderProjects\\Perks\\Perks\\config.yaml",
+              "RelativeDocumentMoniker": "Perks\\config.yaml",
+              "ToolTip": "C:\\Users\\Ludo\\RiderProjects\\Perks\\Perks\\config.yaml",
+              "RelativeToolTip": "Perks\\config.yaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-04-24T17:26:05.087Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

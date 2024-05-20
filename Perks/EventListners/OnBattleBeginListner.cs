@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using OpenMod.API.Eventing;
@@ -31,6 +32,13 @@ public class OnBattleBeginListner : IEventListener<IPlayerSpawnedEvent>
         if (animals == null)
         {
             return Task.CompletedTask;
+        }
+
+        var cows = animals.Where(x => x.asset.FriendlyName == "Cow");
+        
+        foreach (var cow in cows)
+        {
+            _logger.LogInformation(cow.asset.FriendlyName);
         }
 
         var unturnedUser = _userDirectory.FindUser(@event.Player.EntityInstanceId, UserSearchMode.FindById);

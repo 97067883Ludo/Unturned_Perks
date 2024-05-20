@@ -1,6 +1,5 @@
 ﻿using OpenMod.API.Plugins;
 using OpenMod.EntityFrameworkCore.MySql.Extensions;
-using Reinier.Perks.DbContext;
 
 namespace Reinier.Perks;
 

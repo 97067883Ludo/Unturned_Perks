@@ -1,6 +1,6 @@
 ﻿using OpenMod.EntityFrameworkCore.MySql;
 
-namespace Reinier.Perks.DbContext;
+namespace Reinier.Perks;
 
 public class UserConnectionDbContextFactory : OpenModMySqlDbContextFactory<UserConnectionDbContext>
 {
